@@ -1,3 +1,11 @@
+const express = require('express');
+const passport = require('passport');
+const SteamStrategy = require('passport-steam').Strategy;
+const session = require('express-session');
+
+const app = express(); // 👈 questa deve venire PRIMA di qualunque app.get()
+
+
 const MOBILE_REDIRECT = 'quizmindset://auth/steam/callback';
 
 app.get('/auth/steam/return',
